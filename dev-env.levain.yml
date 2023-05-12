@@ -1,0 +1,10 @@
+version: 0.0.1
+
+levain.config.noBaseDir: true
+
+dependencies:
+  # Front-end
+  - node-16
+
+  # Back-end  
+  - jdk-8-ibm-8.0.6.35
