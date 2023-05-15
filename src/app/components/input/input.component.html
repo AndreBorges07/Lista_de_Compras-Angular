@@ -1,6 +1,7 @@
 <!-- Esse é a parte do campo para digitação e o botão de salvar  -->
 
-<form class="add-item" (ngSubmit)="adicionarItem()">
+<form class="add-item" (ngSubmit)="editando ? editarItem() : adicionarItem()">
+  <!-- A "?" é como um um "if" e o ":" é o "else". Como o editando é V/F, ele já confere aí.  -->
   <input
     type="text"
     name="item"
@@ -8,5 +9,6 @@
     [(ngModel)]="valorItem"
   />
   <!-- o "ngModel" quarda o que foi escrito no campo de texto em "valorItem"  -->
-  <button type="submit">Salvar item</button>
+  <button type="submit">{{ textoBtn }}</button>
+  <!-- A interpolação é pra mudar automaticamente, quando estiver editando muda para "Editar" e quando é um novo fica como "Salvar" -->
 </form>
