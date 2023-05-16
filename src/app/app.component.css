@@ -5,21 +5,20 @@
 }
 
 .container {
-  max-width: 328px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
 .lista {
   background: white;
   padding: 1rem;
-  width: 328px;
+  width: 600px;
 }
 
-.lista h4 {
-  /* border-bottom: 1px solid blue; */
+.lista h3 {
   padding-bottom: 1rem;
   /* border-style: none none dashed none; */
-  font-family: "Mansalva", sans-serif;
+  /* font-family: "Mansalva", sans-serif; */
   color: #4574e3;
 }
 
@@ -36,7 +35,7 @@
 }
 
 small {
-  font-size: 0.5rem;
+  font-size: 1rem;
 }
 
 .checkbox {
