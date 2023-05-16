@@ -19,12 +19,16 @@ export class InputComponent implements OnInit, OnChanges {
   textoBtn = 'Salvar item';
 
   valorItem!: string;
+
+  submitted: boolean = false;
+
   constructor(private listaService: ListaDeCompraService) {}
 
   ngOnInit(): void {}
 
   adicionarItem() {
     this.listaService.adicionarItemNaLista(this.valorItem);
+    this.submitted = true;
     this.limparCampo();
   }
 

@@ -30,6 +30,7 @@ export class AppComponent implements OnInit, DoCheck {
 
   limparLista() {
     this.listaDeCompra = [];
+    window.location.reload();
   }
 
   ngDoCheck() {
