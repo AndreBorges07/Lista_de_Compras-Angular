@@ -6,7 +6,6 @@ import {
   OnDestroy,
   OnInit,
   Output,
-  SimpleChanges,
 } from '@angular/core';
 import { faPen, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { Item } from 'src/app/interfaces/iItem';
@@ -32,6 +31,11 @@ export class ItemComponent implements OnInit, OnChanges, OnDestroy {
 
   editarItem() {
     this.emitindoItemParaEditar.emit(this.item);
+    // Ao clicar no "editar", o foco vai direto para o campo de texto
+    const campoInput = document.getElementById(
+      'campoInput'
+    ) as HTMLInputElement;
+    campoInput.focus();
   }
 
   deletarItem() {
