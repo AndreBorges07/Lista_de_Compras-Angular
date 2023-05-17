@@ -5,10 +5,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class ListaDeCompraService {
-  private listaDeCompra: Item[] = [];
+  private listaDeCompra: Item[];
 
   constructor() {
-    this.listaDeCompra = JSON.parse(localStorage.getItem('item') || '[]');
+    this.listaDeCompra = JSON.parse(localStorage.getItem('itens') || '[]');
   }
 
   // Serve para mostrar a lista na tela
@@ -32,7 +32,7 @@ export class ListaDeCompraService {
   adicionarItemNaLista(nomeDoItem: string) {
     const item = this.criarItem(nomeDoItem);
     this.listaDeCompra.push(item);
-    // this.atualizarLocalStorage;
+    // this.atualizarLocalStorage();
   }
 
   //Editar o item que já está na lista
