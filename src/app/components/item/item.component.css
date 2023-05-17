@@ -32,12 +32,14 @@ small {
 .delete-icon {
   justify-self: center;
   align-self: center;
+  color: #aa0000;
   grid-area: delete-icon;
 }
 
 .edit-icon {
   justify-self: center;
   align-self: center;
+  color: #000ea2;
   grid-area: edit-icon;
 }
 
