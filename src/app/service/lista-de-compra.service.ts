@@ -32,7 +32,7 @@ export class ListaDeCompraService {
   adicionarItemNaLista(nomeDoItem: string) {
     const item = this.criarItem(nomeDoItem);
     this.listaDeCompra.push(item);
-    // this.atualizarLocalStorage();
+    this.atualizarLocalStorage();
   }
 
   //Editar o item que já está na lista
@@ -46,10 +46,15 @@ export class ListaDeCompraService {
 
     const id = itemAntigo.id;
     this.listaDeCompra.splice(Number(id) - 1, 1, itemEditado);
-    // this.atualizarLocalStorage;
+    this.atualizarLocalStorage;
   }
 
   atualizarLocalStorage() {
     localStorage.setItem('itens', JSON.stringify(this.listaDeCompra));
+  }
+
+  limparLocalStorage() {
+    localStorage.removeItem('itens');
+    // window.location.reload();
   }
 }
