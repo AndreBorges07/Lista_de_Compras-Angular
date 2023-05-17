@@ -16,9 +16,6 @@
 }
 
 .lista h3 {
-  padding-bottom: 1rem;
-  /* border-style: none none dashed none; */
-  /* font-family: "Mansalva", sans-serif; */
   color: #4574e3;
 }
 
@@ -75,7 +72,7 @@ small {
   border-style: none none dashed none;
   display: flex;
   justify-content: space-between;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1em;
 }
 
 .btn-header {
