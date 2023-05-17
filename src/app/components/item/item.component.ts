@@ -45,6 +45,14 @@ export class ItemComponent implements OnInit, OnChanges, OnDestroy {
     this.emitindoIdParaDeletar.emit(this.item.id);
   }
 
+  checarItem() {
+    if (this.item.comprado == true) {
+      this.item.comprado = false;
+    } else {
+      this.item.comprado = true;
+    }
+  }
+
   ngOnDestroy() {
     console.log('Conseguiram me calar');
   }
