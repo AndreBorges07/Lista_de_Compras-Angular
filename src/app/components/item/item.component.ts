@@ -32,6 +32,7 @@ export class ItemComponent implements OnInit, OnChanges, OnDestroy {
   editarItem() {
     this.emitindoItemParaEditar.emit(this.item);
     // Ao clicar no "editar", o foco vai direto para o campo de texto
+    //Precisa colocar o id="campoInput" lá no html.
     const campoInput = document.getElementById(
       'campoInput'
     ) as HTMLInputElement;
