@@ -30,16 +30,23 @@ export class ListaDeCompraService {
 
   // Add o item dentro da lista
   adicionarItemNaLista(nomeDoItem: string) {
-    const item = this.criarItem(nomeDoItem);
-    this.listaDeCompra.push(item);
-    this.atualizarLocalStorage();
+    if (!this.conferirItem(nomeDoItem)) {
+      const item = this.criarItem(nomeDoItem);
+      this.listaDeCompra.push(item);
+      this.atualizarLocalStorage();
+    } else {
+      console.log('O item ' + nomeDoItem + ' já existe na lista');
+      alert('O item ' + nomeDoItem + ' já existe na lista');
+    }
   }
 
   //Editar o item que já está na lista
   editarItemDaLista(itemAntigo: Item, nomeEditadoDoItem: string) {
+    const nomeMaiusculo = nomeEditadoDoItem.toUpperCase(); // Mantém o nome em caixa alta
+
     const itemEditado: Item = {
       id: itemAntigo.id,
-      nome: nomeEditadoDoItem,
+      nome: nomeMaiusculo,
       data: itemAntigo.data,
       comprado: itemAntigo.comprado,
     };
@@ -49,12 +56,16 @@ export class ListaDeCompraService {
     this.atualizarLocalStorage;
   }
 
+  //Serve para identificar se já existe o item na lista, impedindo o nome duplicado.
+  conferirItem(nomeDoItem: string): boolean {
+    return this.listaDeCompra.some((item) => item.nome === nomeDoItem);
+  }
+
   atualizarLocalStorage() {
     localStorage.setItem('itens', JSON.stringify(this.listaDeCompra));
   }
 
   limparLocalStorage() {
     localStorage.removeItem('itens');
-    // window.location.reload();
   }
 }
