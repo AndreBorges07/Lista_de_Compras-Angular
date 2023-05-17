@@ -40,7 +40,7 @@ export class ItemComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   deletarItem() {
-    console.log('estão tentando me calar');
+    console.log('Item ' + this.item.nome + ' Deletado');
 
     this.emitindoIdParaDeletar.emit(this.item.id);
   }
@@ -54,6 +54,6 @@ export class ItemComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   ngOnDestroy() {
-    console.log('Conseguiram me calar');
+    console.log('Campo limpo');
   }
 }

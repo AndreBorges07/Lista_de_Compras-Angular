@@ -27,6 +27,7 @@ export class InputComponent implements OnInit, OnChanges {
   ngOnInit(): void {}
 
   adicionarItem() {
+    this.valorItem = this.valorItem.toUpperCase(); // Coloca o texto em caixa alta
     this.listaService.adicionarItemNaLista(this.valorItem);
     this.submitted = true;
     this.limparCampo();
