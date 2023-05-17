@@ -1,4 +1,4 @@
-import { Component, DoCheck, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Item } from './interfaces/iItem';
 import { ListaDeCompraService } from './service/lista-de-compra.service';
 
@@ -7,7 +7,7 @@ import { ListaDeCompraService } from './service/lista-de-compra.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements OnInit, DoCheck {
+export class AppComponent implements OnInit {
   title = 'app-lista-de-compras';
   listaDeCompra!: Array<Item>;
   itemParaSerEditado!: Item;
@@ -31,11 +31,5 @@ export class AppComponent implements OnInit, DoCheck {
   limparLista() {
     this.listaService.limparLocalStorage();
     this.listaDeCompra.splice(0, this.listaDeCompra.length);
-  }
-
-  ngDoCheck() {
-    console.log('ngDoCheck foi chamado');
-
-    this.listaService.atualizarLocalStorage();
   }
 }
