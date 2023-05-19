@@ -1,7 +1,7 @@
 # Lista de Compras | Angular
 ![Status-Em desenvimento-blue](https://github.com/AndreBorges07/Lista_de_Compras-Angular/assets/93163125/95a1390d-7fe0-43cd-a43d-a65ddcd999da)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
+Acesse o projeto por aqui: https://andreborges07.github.io/Lista_de_Compras-Angular/
 
 ## Development server
 
